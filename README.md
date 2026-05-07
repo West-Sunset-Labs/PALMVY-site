@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# West Sunset Labs — Portal 
 
-## Getting Started
+*Engineering the future under the west coast light.*
 
-First, run the development server:
+## Overview
+Este repositório contém o código-fonte do portal oficial da **West Sunset Labs**. Projetado com uma estética estrita de "Dark Mode Premium" e focado em alta performance, o portal serve como a vitrine central para o nosso ecossistema de ferramentas de autonomia humana, incluindo os produtos **LumeaOppo** , **Sai de Casa** e outros.
+
+## Technical Stack
+Construído com foco em latência mínima e tipagem estrita:
+- **Core:** Next.js 15 (App Router) & React
+- **Language:** TypeScript (Strict Mode)
+- **Styling:** Tailwind CSS (Mobile-first, True Glassmorphism)
+- **Icons:** Lucide React
+
+## Architecture & Standards
+Todo o desenvolvimento, padrões visuais (LA Sunset Pallete) e governança de dependências são ditados pelo nosso documento de decisão arquitetural. 
+> Consulte o arquivo `ARCHITECTURE.md` para as diretrizes completas do sistema.
+
+## Local Setup
+Para rodar o ambiente de desenvolvimento localmente:
 
 ```bash
+# Instalar dependências (Versões travadas no package.json)
+npm install
+
+# Iniciar o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse http://localhost:3000 no seu navegador
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Intellectual Property & License
+Copyright © 2026 Sam Campos Almeida / West Sunset Labs. All rights reserved.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This software is proprietary and confidential. Unauthorized copying, modification, distribution, or use of this source code, via any medium, is strictly prohibited.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For academic review, portfolio verification, or business inquiries, please contact the founder at: sam@westsunsetlabs.com.
