@@ -1,25 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #09090B;
-  --foreground: #fafafa;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* PALMVY — paleta oficial (Contexto) */
+  --color-pacific-night: #071a2b;
+  --color-pacific-deep: #0e2a40;
+  --color-cloud: #f5f7f4;
+  --color-soft-gray: #c7d1d8;
+  --color-muted: #8fa1ad;
+  --color-sunset: #ff7a45;
+  --color-sunset-dark: #e2673a;
+  --color-gold: #ffc857;
+  --color-pacific-blue: #147d9a;
+  --color-palm-green: #164a43;
+
+  /* Geist vem do next/font (app/layout.tsx); o resto é fallback de sistema. */
+  --font-display: var(--font-geist-sans), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), "SFMono-Regular", Consolas,
+    "Liberation Mono", Menlo, monospace;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background-color: var(--color-pacific-night);
+  color: var(--color-soft-gray);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+::selection {
+  background-color: var(--color-sunset);
+  color: var(--color-pacific-night);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sunset);
+  outline-offset: 2px;
+}
+
+/* Grão sutil no fundo inteiro — quebra o "chapado" sem usar gradiente de cor */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

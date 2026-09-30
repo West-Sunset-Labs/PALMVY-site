@@ -1,21 +1,16 @@
-# dependencies
-/node_modules
+node_modules
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
 
-# next.js
-/.next/
-/out/
-/build
+# Segredos e variáveis de ambiente: nunca versionar
+.env*
+!.env.example
 
-# env
-.env
-.env.local
-.env.*.local
-
-# misc
 .DS_Store
-*.pem
-npm-debug.log*
 
-.claude/
-CLAUDE.md
-AGENTS.md
+//outras coisas
+app/privacidade
+produtos
+termos

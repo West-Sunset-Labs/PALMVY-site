@@ -1,17 +1,19 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { AppGrid } from "@/components/sections/AppGrid";
-import { StudioBio } from "@/components/sections/StudioBio";
+import { Products } from "@/components/sections/Products";
+import { Philosophy } from "@/components/sections/Philosophy";
+import { HowWeWork } from "@/components/sections/HowWeWork";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#09090B]">
+    <div className="flex min-h-screen flex-col bg-pacific-night">
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         <Hero />
-        <AppGrid />
-        <StudioBio />
+        <Products />
+        <Philosophy />
+        <HowWeWork />
       </main>
       <Footer />
     </div>
