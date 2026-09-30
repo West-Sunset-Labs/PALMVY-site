@@ -55,7 +55,7 @@ Este documento dita as regras arquiteturais, visuais e de governança do portal 
 - **Compartilhamento:** `app/opengraph-image.png` e `app/twitter-image.png` (1200×630). Mantenha o conteúdo importante no centro, porque o WhatsApp corta as bordas.
 
 ## 5. Estrutura de pastas
-- `/app`: apenas roteamento, metadados e união de seções (Views). Landing pages de produto ficam em `app/produtos/[slug]`, geradas a partir de `core/data/products.ts`. Páginas legais (`app/privacidade`, `app/termos`) renderizam os textos de `core/data/legal`.
+- `/app`: apenas roteamento, metadados e união de seções (Views). Landing pages de produto ficam em `app/produtos/[slug]`, geradas a partir de `core/data/products.ts`. Páginas legais (`app/privacidade`, `app/termos`) renderizam os textos de `core/data/legal`. `app/sitemap.ts` e `app/robots.ts` saem de `core/data/sitemap.ts` e `core/data/site.ts` (domínio em um lugar só). Páginas legais em rascunho ficam fora do sitemap.
 - `/components/ui`: blocos visuais sem regra de negócio (`Button`, `Card`, `CtaLink`, `Logo`). Recebem tudo por props.
 - `/components/sections`: blocos de contexto da página (`Navbar`, `Hero`, `Products`, `Footer`...). Componentes que precisam de estado do navegador (ex.: `MobileMenu`) levam `'use client'` e ficam o menor possível.
 - `/core/data`: todo dado estático e configuração (textos, links, produtos, navegação, contato), isolado dos componentes React. Testes desses módulos ficam ao lado deles (`*.test.ts`).

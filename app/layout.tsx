@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CloudflareAnalytics } from "@/components/ui/CloudflareAnalytics";
+import { SITE_URL } from "@/core/data/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: "PALMVY — Apps feitos com calma",
   description:
     "Web, Mobile, and product development studio",
-  metadataBase: new URL("https://palmvy.com.br"),
+  metadataBase: new URL(SITE_URL),
   keywords: [
     "apps",
     "product studio",
